@@ -1,0 +1,23 @@
+import pandas as pd
+from pandas import DataFrame
+import numpy as np
+
+df1 = pd.read_excel("/Users/macbook/Seazone/dados_vivareal.xlsx")
+print(df1)
+
+del df1["Localidade_ID"]
+
+df1.head()
+
+df1["Localidade"].value_counts(0)
+
+valor.to_excel("Tendencia.xlsx")
+
+df2 = pd.read_excel("/Users/macbook/Seazone/Tendencia.xlsx")
+
+df2 = df2.drop(0)
+
+tend = df2.get_value(2, 'Localidade_Nome')
+
+print(f"De acordo com essas informações, a localidade {tend} é a que possui mais pessoas querendo vender imóveis, por esse motivo esse endereço se torna uma boa região para a Seazone adquirir novos clientes"
+)
